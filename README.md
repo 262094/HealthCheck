@@ -1,6 +1,6 @@
 # HealthCheck
 First repository
-Utworzona aplikacja zawierac ma docelowo byc:
+Utworzona aplikacja zawierac ma byc:
 *1 prosta w uzytkowaniu
 *2 kalkulator bmi i/lub kalkulator whr
 *4 przykladowe diety
