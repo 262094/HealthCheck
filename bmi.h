@@ -4,25 +4,26 @@
 #include <QWidget>
 
 namespace Ui {
-class bmi;
+class Bmi;
 }
 
-class bmi : public QWidget
+class Bmi : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit bmi(QWidget *parent = nullptr);
-    ~bmi();
-
-private slots:
-void on_pushButton_3_clicked();
+    explicit Bmi(QWidget *parent = nullptr);
+    ~Bmi();
 
 private:
-    Ui::bmi *ui;
+    Ui::Bmi *ui;
 
 signals:
     void HomeClicked();
+
+private slots:
+    void on_pushButton_back_to_menu_clicked();
+    void on_pushButton_calculate_bmi_clicked();
 
 
 };

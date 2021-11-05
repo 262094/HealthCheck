@@ -1,11 +1,11 @@
-#include "healthcheck.h"
+#include "healtcheck.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    HealthCheck w;
+    HealtCheck w;
     w.show();
     return a.exec();
 }

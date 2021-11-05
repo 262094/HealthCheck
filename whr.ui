@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Bmi</class>
- <widget class="QWidget" name="Bmi">
+ <class>Whr</class>
+ <widget class="QWidget" name="Whr">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.057, y1:0.068, x2:1, y2:1, stop:0 rgba(255, 170, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+  </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
@@ -47,13 +50,28 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 152, 207, 255), stop:1 rgba(255, 255, 255, 255));</string>
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.057, y1:0.068, x2:1, y2:1, stop:0 rgba(255, 170, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <widget class="QWidget" name="page">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.057, y1:0.068, x2:1, y2:1, stop:0 rgba(255, 170, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+    </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>90</x>
        <y>20</y>
        <width>291</width>
        <height>51</height>
@@ -65,7 +83,7 @@ font: 30pt &quot;MS Shell Dlg2&quot;;
 background-color:transparent;</string>
      </property>
      <property name="text">
-      <string>Calculator BMI</string>
+      <string>Calculator WHR</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">
@@ -86,10 +104,74 @@ background-color:transparent;</string>
       <string>Your gender: </string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:red;
+font:24px;
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>Waist ratio [cm]:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:red;
+font:24px;
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>Waist ratio [cm]:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>190</y>
+       <width>221</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">FONT-SIZE:24PX;
+background-color: WHITE;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>260</y>
+       <width>221</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">FONT-SIZE:24PX;
+background-color: WHITE;</string>
+     </property>
+    </widget>
     <widget class="QComboBox" name="comboBox">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>200</x>
        <y>120</y>
        <width>221</width>
        <height>51</height>
@@ -110,75 +192,11 @@ background-color: WHITE;</string>
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>200</y>
-       <width>221</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">FONT-SIZE:24PX;
-background-color: WHITE;</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>280</y>
-       <width>221</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">FONT-SIZE:24PX;
-background-color: WHITE;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>200</y>
-       <width>191</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:red;
-font:24px;
-background-color:transparent;</string>
-     </property>
-     <property name="text">
-      <string>Your height [cm]: </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>280</y>
-       <width>191</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:red;
-font:24px;
-background-color:transparent;</string>
-     </property>
-     <property name="text">
-      <string>Your weight [cm]: </string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_calculate_bmi">
+    <widget class="QPushButton" name="pushButton_calculate">
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>350</y>
+       <y>330</y>
        <width>240</width>
        <height>60</height>
       </rect>
