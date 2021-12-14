@@ -24,6 +24,7 @@ signals:
 private slots:
     void on_pushButton_back_to_menu_clicked();
 
+    void on_pushButton_open_the_diet_clicked();
 };
 
 #endif // DIET_H

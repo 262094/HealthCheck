@@ -11,6 +11,8 @@ CONFIG += c++11
 SOURCES += \
     bmi.cpp \
     diet.cpp \
+    liczeniebmi.cpp \
+    liczeniewhr.cpp \
     main.cpp \
     healtcheck.cpp \
     whr.cpp
@@ -19,6 +21,8 @@ HEADERS += \
     bmi.h \
     diet.h \
     healtcheck.h \
+    liczeniebmi.h \
+    liczeniewhr.h \
     whr.h
 
 FORMS += \

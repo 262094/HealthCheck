@@ -6,9 +6,10 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
-
-
-
+#include <QFontDialog>
+#include <QFont>
+#include <QColorDialog>
+#include <QColor>
 
 
 
@@ -83,32 +84,32 @@ void HealtCheck::on_pushButton_back_to_menu_clicked()
 
 void HealtCheck::on_actionNew_triggered()
 {
+     ui->stackedWidget->setCurrentIndex(4); //przenoszenie na index z athlets dietary
     file_path_ = "";
-     ui->textEdit->setText("Share your day today here:  Describe your day: ""\n"
-                           "\n"
-                           "Date of data entry:   ""\n"
-                           "Your age:   " "\n"
-                           "Your weight:   ""\n"
-                           "Your height:   ""\n"
-                           "Your BMI:   ""\n"
-                           "Your WHR:   ""\n"  );
-
+     ui->textEdit->setText("Podaj swoją wagę: \n"
+                           "Podaj swój wzrost: \n"
+                           "Podaj swój wiek: \n"
+                           "Podaj dietę którą stosujesz: \n"
+                           "Twoje bmi: \n"
+                           "Twoj wskaznik whr: \n"
+                           );
 }
 
 
 void HealtCheck::on_actionOpen_triggered()
 {
-    QString file_open = QFileDialog::getOpenFileName(this,"Open the file");
+   QString file_open = QFileDialog::getOpenFileName(this,"Open the file");
      QFile file(file_open);
      file_path_ = file_open;
      if(!file.open(QFile::ReadOnly | QFile::Text)) {
-         QMessageBox::warning(this,"..","The file has not been opened");
+         QMessageBox::warning(this,"Open","The file has not been opened");
          return;
        }
      QTextStream in(&file);
      QString text = in.readAll();
      ui->textEdit->setText(text);
      file.close();
+      ui->stackedWidget->setCurrentIndex(4); //przenoszenie na index z athlets dietary
 }
 
 
@@ -116,7 +117,7 @@ void HealtCheck::on_actionSave_triggered()
 {
     QFile file(file_path_);
       if(!file.open(QFile::WriteOnly | QFile::Text)) {
-          QMessageBox::warning(this,"..","The file has not been opened");
+          QMessageBox::warning(this,"Save","The file has not been saved");
           return;
         }
       QTextStream out(&file);
@@ -129,12 +130,13 @@ void HealtCheck::on_actionSave_triggered()
 
 void HealtCheck::on_actionSave_as_triggered()
 {
-    QString file_open = QFileDialog::getSaveFileName(this,"Open the file");
-     QFile file(file_open);
+   QString file_open = QFileDialog::getSaveFileName(this,"Save file as");
+     QFile file(file_open + ".txt");
      file_path_ = file_open;
-     if(!file.open(QFile::WriteOnly | QFile::Text)) {
-         QMessageBox::warning(this,"..","The file has not been opened");
+    if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+         QMessageBox::warning(this,"Save as","The file has not been saved");
          return;
+
        }
      QTextStream out(&file);
      QString text = ui->textEdit->toPlainText();

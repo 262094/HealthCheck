@@ -127,7 +127,7 @@ background-color:transparent;</string>
       <rect>
        <x>10</x>
        <y>260</y>
-       <width>201</width>
+       <width>181</width>
        <height>51</height>
       </rect>
      </property>
@@ -137,7 +137,7 @@ font:24px;
 background-color:transparent;</string>
      </property>
      <property name="text">
-      <string>Waist ratio [cm]:</string>
+      <string>Hip ratio [cm]:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit">

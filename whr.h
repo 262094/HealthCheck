@@ -15,6 +15,7 @@ public:
     explicit Whr(QWidget *parent = nullptr);
     ~Whr();
 
+
 private:
     Ui::Whr *ui;
 

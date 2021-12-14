@@ -5,7 +5,7 @@
 #include <whr.h>
 #include <bmi.h>
 #include <diet.h>
-
+#include <liczeniebmi.h>
 
 
 QT_BEGIN_NAMESPACE
