@@ -117,7 +117,7 @@ void HealtCheck::on_actionSave_triggered()
 {
     QFile file(file_path_);
       if(!file.open(QFile::WriteOnly | QFile::Text)) {
-          QMessageBox::warning(this,"Save","The file has not been saved");
+          QMessageBox::warning(this,"Save","The file has not been saved, select the save as option");
           return;
         }
       QTextStream out(&file);
